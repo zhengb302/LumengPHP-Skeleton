@@ -15,5 +15,10 @@
     "require": {
         "lumeng/lumeng-php": "dev-master",
         "lumeng/lumeng-php-db": "dev-master"
+    },
+    "autoload": {
+        "psr-4": {
+            "Domain\\": "app/Domain"
+        }
     }
 }
