@@ -16,6 +16,16 @@ class AppSetting implements HttpAppSettingInterface {
      */
     private $rootDir;
 
+    /**
+     * @var string 运行时目录
+     */
+    private $runtimeDir;
+
+    public function __construct($rootDir, $runtimeDir) {
+        $this->rootDir = $rootDir;
+        $this->runtimeDir = $runtimeDir;
+    }
+
     public function getServices() {
         return [];
     }
@@ -36,8 +46,8 @@ class AppSetting implements HttpAppSettingInterface {
         return $this->rootDir;
     }
 
-    public function getCacheDir() {
-        
+    public function getRuntimeDir() {
+        return $this->runtimeDir;
     }
 
 }

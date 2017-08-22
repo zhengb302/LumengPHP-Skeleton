@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP.git",
-                "reference": "1dc0194d08896e02b7dfbc51269d1d3b7889a5b0"
+                "reference": "02514218001259dbd95b92f9ee04f76878c95282"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/1dc0194d08896e02b7dfbc51269d1d3b7889a5b0",
-                "reference": "1dc0194d08896e02b7dfbc51269d1d3b7889a5b0",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/02514218001259dbd95b92f9ee04f76878c95282",
+                "reference": "02514218001259dbd95b92f9ee04f76878c95282",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-08-22 05:40:35"
+            "time": "2017-08-22 08:25:55"
         },
         {
             "name": "lumeng/lumeng-php-db",

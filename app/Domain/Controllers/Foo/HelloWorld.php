@@ -2,6 +2,8 @@
 
 namespace Domain\Controllers\Foo;
 
+use LumengPHP\Http\Result\Success;
+
 /**
  * HelloWorld
  *
@@ -10,7 +12,7 @@ namespace Domain\Controllers\Foo;
 class HelloWorld {
 
     public function execute() {
-        
+        return new Success('hello world!');
     }
 
 }

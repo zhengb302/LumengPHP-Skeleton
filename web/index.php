@@ -10,7 +10,7 @@ require($rootDir . '/vendor/autoload.php');
 
 $request = Request::createFromGlobals();
 
-$appSetting = new AppSetting();
+$appSetting = new AppSetting($rootDir, $rootDir . '/runtime');
 $configFilePath = $rootDir . '/config/config.php';
 $app = new Application($appSetting, $configFilePath);
 $app->handle($request);
