@@ -11,8 +11,20 @@ use LumengPHP\Http\Result\Success;
  */
 class HelloWorld {
 
+    /**
+     * @var string 
+     * @get
+     */
+    private $msg;
+
+    public function init() {
+        if (!$this->msg) {
+            $this->msg = 'world';
+        }
+    }
+
     public function execute() {
-        return new Success('hello world!');
+        return new Success("hello {$this->msg}!");
     }
 
 }

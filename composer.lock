@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1271dfa69eb6fcfcc4c02068e061ac90",
-    "content-hash": "930150dffa687cd0c0b9fcf2e72eae6a",
+    "hash": "53c5a39638dc3f07d5bee19fec02a7b0",
+    "content-hash": "16f7025240c7d585f4df3bc5d0aa7129",
     "packages": [
         {
             "name": "lumeng/lumeng-php",
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP.git",
-                "reference": "13360514d0fdb1a12a74d55e78f235072e9729ad"
+                "reference": "d6561e867a152bb53d098f15aef1bb95975ee274"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/13360514d0fdb1a12a74d55e78f235072e9729ad",
-                "reference": "13360514d0fdb1a12a74d55e78f235072e9729ad",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/d6561e867a152bb53d098f15aef1bb95975ee274",
+                "reference": "d6561e867a152bb53d098f15aef1bb95975ee274",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-08-22 08:53:29"
+            "time": "2017-08-22 10:53:57"
         },
         {
             "name": "lumeng/lumeng-php-db",
@@ -205,6 +205,8 @@
     },
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=5.6.0"
+    },
     "platform-dev": []
 }
