@@ -31,7 +31,9 @@ class AppSetting implements HttpAppSettingInterface {
     }
 
     public function getExtensions() {
-        return [];
+        return [
+            \Foo\Bar\Extensions\DatabaseExtension::class,
+        ];
     }
 
     public function getRootDir() {
@@ -50,6 +52,7 @@ class AppSetting implements HttpAppSettingInterface {
         return [
             '/home' => \Foo\Bar\Controllers\Home::class,
             '/user/greetUser' => \Foo\Bar\Controllers\User\GreetUser::class,
+            '/user/showUser' => \Foo\Bar\Controllers\User\ShowUser::class,
         ];
     }
 
