@@ -1,6 +1,6 @@
 <?php
 
-namespace Domain;
+namespace Foo\Bar;
 
 use LumengPHP\Http\HttpAppSettingInterface;
 
@@ -34,20 +34,23 @@ class AppSetting implements HttpAppSettingInterface {
         return [];
     }
 
-    public function getInterceptors() {
-        return [];
-    }
-
-    public function getControllerParentNamespace() {
-        return 'Domain\Controllers';
-    }
-
     public function getRootDir() {
         return $this->rootDir;
     }
 
     public function getRuntimeDir() {
         return $this->runtimeDir;
+    }
+
+    public function getInterceptors() {
+        return [];
+    }
+
+    public function getRoutingConfig() {
+        return [
+            '/home' => \Foo\Bar\Controllers\Home::class,
+            '/user/greetUser' => \Foo\Bar\Controllers\User\GreetUser::class,
+        ];
     }
 
 }

@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP.git",
-                "reference": "d6561e867a152bb53d098f15aef1bb95975ee274"
+                "reference": "0a0345ebede05e9bfbd478c60a18d3be1793ee61"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/d6561e867a152bb53d098f15aef1bb95975ee274",
-                "reference": "d6561e867a152bb53d098f15aef1bb95975ee274",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/0a0345ebede05e9bfbd478c60a18d3be1793ee61",
+                "reference": "0a0345ebede05e9bfbd478c60a18d3be1793ee61",
                 "shasum": ""
             },
             "require": {
@@ -29,7 +29,8 @@
             "type": "library",
             "autoload": {
                 "files": [
-                    "src/LumengPHP/Kernel/functions.php"
+                    "src/LumengPHP/Kernel/functions.php",
+                    "src/LumengPHP/Http/functions.php"
                 ],
                 "psr-4": {
                     "LumengPHP\\": "src/LumengPHP/"
@@ -53,7 +54,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-08-22 10:53:57"
+            "time": "2017-08-31 09:02:25"
         },
         {
             "name": "lumeng/lumeng-php-db",
@@ -61,15 +62,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP-Db.git",
-                "reference": "9af29423846d6d1728b6201e7aac04a183c08739"
+                "reference": "f45e4f7182f2887325444bbf800258dba916fbc6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP-Db/zipball/9af29423846d6d1728b6201e7aac04a183c08739",
-                "reference": "9af29423846d6d1728b6201e7aac04a183c08739",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP-Db/zipball/f45e4f7182f2887325444bbf800258dba916fbc6",
+                "reference": "f45e4f7182f2887325444bbf800258dba916fbc6",
                 "shasum": ""
             },
             "require": {
+                "php": ">=5.6.0",
                 "psr/log": "^1.0"
             },
             "type": "library",
@@ -96,7 +98,7 @@
                 "database operation library",
                 "library"
             ],
-            "time": "2017-08-02 04:36:27"
+            "time": "2017-08-22 09:16:54"
         },
         {
             "name": "psr/log",

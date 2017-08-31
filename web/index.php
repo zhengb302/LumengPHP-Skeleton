@@ -1,6 +1,6 @@
 <?php
 
-use Domain\AppSetting;
+use Foo\Bar\AppSetting;
 use LumengPHP\Http\Application;
 use LumengPHP\Http\Request;
 
