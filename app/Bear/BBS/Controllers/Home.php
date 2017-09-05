@@ -1,6 +1,6 @@
 <?php
 
-namespace Foo\Bar\Controllers;
+namespace Bear\BBS\Controllers;
 
 /**
  * Home

@@ -1,6 +1,6 @@
 <?php
 
-namespace Foo\Bar\Models;
+namespace Bear\BBS\Models;
 
 use LumengPHP\Db\Model;
 

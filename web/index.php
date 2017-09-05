@@ -1,6 +1,6 @@
 <?php
 
-use Foo\Bar\AppSetting;
+use Bear\BBS\AppSetting;
 use LumengPHP\Http\Application;
 use LumengPHP\Http\Request;
 

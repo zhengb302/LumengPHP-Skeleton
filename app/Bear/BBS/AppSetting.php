@@ -1,6 +1,6 @@
 <?php
 
-namespace Foo\Bar;
+namespace Bear\BBS;
 
 use LumengPHP\Http\HttpAppSettingInterface;
 
@@ -32,7 +32,7 @@ class AppSetting implements HttpAppSettingInterface {
 
     public function getExtensions() {
         return [
-            \Foo\Bar\Extensions\DatabaseExtension::class,
+            \LumengPHP\Extensions\DatabaseExtension::class,
         ];
     }
 
@@ -50,9 +50,9 @@ class AppSetting implements HttpAppSettingInterface {
 
     public function getRoutingConfig() {
         return [
-            '/home' => \Foo\Bar\Controllers\Home::class,
-            '/user/greetUser' => \Foo\Bar\Controllers\User\GreetUser::class,
-            '/user/showUser' => \Foo\Bar\Controllers\User\ShowUser::class,
+            '/home' => \Bear\BBS\Controllers\Home::class,
+            '/user/greetUser' => \Bear\BBS\Controllers\User\GreetUser::class,
+            '/user/showUser' => \Bear\BBS\Controllers\User\ShowUser::class,
         ];
     }
 

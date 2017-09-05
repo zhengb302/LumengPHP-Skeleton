@@ -1,6 +1,6 @@
 <?php
 
-namespace Foo\Bar\Controllers\User;
+namespace Bear\BBS\Controllers\User;
 
 use Exception;
 

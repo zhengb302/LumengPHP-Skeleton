@@ -2,7 +2,7 @@
     "name": "lumeng/lumeng-php-skeleton",
     "description": "A lightweight PHP framework that is fast and testable.",
     "keywords": ["framework", "PHP framework"],
-    "homepage": "https://github.com/zhengb302/LumengPHP",
+    "homepage": "https://github.com/zhengb302/LumengPHP-Skeleton",
     "license": "Apache License 2.0",
     "authors": [
         {
@@ -15,11 +15,12 @@
     "require": {
         "php": ">=5.6.0",
         "lumeng/lumeng-php": "dev-master",
-        "lumeng/lumeng-php-db": "dev-master"
+        "lumeng/lumeng-php-db": "dev-master",
+        "lumeng/lumeng-php-extensions": "dev-master"
     },
     "autoload": {
         "psr-4": {
-            "Foo\\Bar\\": "app/Foo/Bar"
+            "Bear\\BBS\\": "app/Bear/BBS"
         }
     }
 }
