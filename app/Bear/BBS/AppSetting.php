@@ -50,7 +50,7 @@ class AppSetting implements HttpAppSettingInterface {
 
     public function getRoutingConfig() {
         return [
-            '/home' => \Bear\BBS\Controllers\Home::class,
+            '/helloWorld' => \Bear\BBS\Controllers\HelloWorld::class,
             '/user/greetUser' => \Bear\BBS\Controllers\User\GreetUser::class,
             '/user/showUser' => \Bear\BBS\Controllers\User\ShowUser::class,
         ];

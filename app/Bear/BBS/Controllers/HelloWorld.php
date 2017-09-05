@@ -3,14 +3,14 @@
 namespace Bear\BBS\Controllers;
 
 /**
- * Home
+ * HelloWorld
  *
  * @author zhengluming <luming.zheng@shandjj.com>
  */
-class Home {
+class HelloWorld {
 
     public function execute() {
-        return success('hello world!');
+        return success('Hello world!');
     }
 
 }
