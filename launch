@@ -2,8 +2,6 @@
 <?php
 /*
  * 控制台应用
- * Usage:
- *     launch <cmd name> [arg1] [arg2] ... [argX]
  */
 
 use Bear\BBS\AppSetting;
