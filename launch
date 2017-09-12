@@ -1,0 +1,20 @@
+#!/usr/bin/env php
+<?php
+/*
+ * 控制台应用
+ * Usage:
+ *     launch <cmd name> [arg1] [arg2] ... [argX]
+ */
+
+use Bear\BBS\AppSetting;
+use LumengPHP\Console\Application;
+
+$rootDir = __DIR__;
+
+require($rootDir . '/vendor/autoload.php');
+
+$appSetting = new AppSetting($rootDir, $rootDir . '/runtime');
+$configFilePath = $rootDir . '/config/config.php';
+
+$app = new Application($appSetting, $configFilePath);
+$app->run();

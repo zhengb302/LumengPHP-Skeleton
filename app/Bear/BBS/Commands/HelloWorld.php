@@ -1,16 +1,16 @@
 <?php
 
-namespace Bear\BBS\Controllers;
+namespace Bear\BBS\Commands;
 
 /**
- * HelloWorld for HTTP
+ * HelloWorld for Console
  *
  * @author zhengluming <luming.zheng@shandjj.com>
  */
 class HelloWorld {
 
     public function execute() {
-        return success('Hello world!');
+        echo "Hello world!\n";
     }
 
 }

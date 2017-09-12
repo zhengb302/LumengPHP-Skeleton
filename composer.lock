@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "9b9d5eecb35f6dc604edc9f4b085cb86",
+    "hash": "5bfd83dd5a758d37ffbfe1e1b3ecaa34",
     "content-hash": "9aa047ccbd855bf1c75aa590510faad3",
     "packages": [
         {
@@ -13,12 +13,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP.git",
-                "reference": "5998f9130fcaca3b115624c5a498a61ce3a91711"
+                "reference": "850e63002ea4f687ec631044fd56808f621bbd3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/5998f9130fcaca3b115624c5a498a61ce3a91711",
-                "reference": "5998f9130fcaca3b115624c5a498a61ce3a91711",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/850e63002ea4f687ec631044fd56808f621bbd3f",
+                "reference": "850e63002ea4f687ec631044fd56808f621bbd3f",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-09-01 06:29:01"
+            "time": "2017-09-12 10:11:29"
         },
         {
             "name": "lumeng/lumeng-php-db",

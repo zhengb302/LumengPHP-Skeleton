@@ -3,13 +3,14 @@
 namespace Bear\BBS;
 
 use LumengPHP\Http\HttpAppSettingInterface;
+use LumengPHP\Console\ConsoleAppSettingInterface;
 
 /**
  * 应用配置
  *
  * @author zhengluming <luming.zheng@shandjj.com>
  */
-class AppSetting implements HttpAppSettingInterface {
+class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface {
 
     /**
      * @var string 应用根目录
@@ -53,6 +54,12 @@ class AppSetting implements HttpAppSettingInterface {
             '/helloWorld' => \Bear\BBS\Controllers\HelloWorld::class,
             '/user/greetUser' => \Bear\BBS\Controllers\User\GreetUser::class,
             '/user/showUser' => \Bear\BBS\Controllers\User\ShowUser::class,
+        ];
+    }
+
+    public function getCmdMapping() {
+        return [
+            'helloWorld' => \Bear\BBS\Commands\HelloWorld::class,
         ];
     }
 
