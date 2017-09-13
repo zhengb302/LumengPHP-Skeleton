@@ -60,6 +60,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
     public function getCmdMapping() {
         return [
             'helloWorld' => \Bear\BBS\Commands\HelloWorld::class,
+            'user.showUser' => \Bear\BBS\Commands\User\ShowUser::class,
         ];
     }
 
