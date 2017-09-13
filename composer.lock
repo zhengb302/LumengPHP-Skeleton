@@ -106,12 +106,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP-Extensions.git",
-                "reference": "8fe39d0e3c765dc2e0c6a3f732f396d4253fc26c"
+                "reference": "aa69246bd1cd689f815e471f57cf5218c7a15fb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP-Extensions/zipball/8fe39d0e3c765dc2e0c6a3f732f396d4253fc26c",
-                "reference": "8fe39d0e3c765dc2e0c6a3f732f396d4253fc26c",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP-Extensions/zipball/aa69246bd1cd689f815e471f57cf5218c7a15fb8",
+                "reference": "aa69246bd1cd689f815e471f57cf5218c7a15fb8",
                 "shasum": ""
             },
             "require": {
@@ -143,7 +143,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-09-05 03:05:07"
+            "time": "2017-09-13 04:56:16"
         },
         {
             "name": "psr/log",
