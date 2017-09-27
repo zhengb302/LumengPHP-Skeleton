@@ -10,3 +10,6 @@ config/env
 
 # 忽略运行时目录
 runtime/
+
+# 
+composer.lock
