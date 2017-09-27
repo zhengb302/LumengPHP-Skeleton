@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "1935baf83fce48fa4502b2ae19e6986d",
-    "content-hash": "24f4ce596e86a8ec0c39c5e8ef181e06",
+    "hash": "183ac83c766807a424d460db9e7b63ac",
+    "content-hash": "ca521bf42befe84773f169339c88430e",
     "packages": [
         {
             "name": "lumeng/lumeng-php",
-            "version": "v0.1.0",
+            "version": "v0.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP.git",
-                "reference": "ed0e4f4bbbc5121c4e8c4d5d57f9403e2a359348"
+                "reference": "1488a55411c94bbbc119f1d47f09edab593b8d06"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/ed0e4f4bbbc5121c4e8c4d5d57f9403e2a359348",
-                "reference": "ed0e4f4bbbc5121c4e8c4d5d57f9403e2a359348",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP/zipball/1488a55411c94bbbc119f1d47f09edab593b8d06",
+                "reference": "1488a55411c94bbbc119f1d47f09edab593b8d06",
                 "shasum": ""
             },
             "require": {
@@ -54,7 +54,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-09-14 10:20:29"
+            "time": "2017-09-27 05:01:29"
         },
         {
             "name": "lumeng/lumeng-php-db",
@@ -102,21 +102,21 @@
         },
         {
             "name": "lumeng/lumeng-php-extensions",
-            "version": "v0.1.0",
+            "version": "v0.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zhengb302/LumengPHP-Extensions.git",
-                "reference": "00e42ed620744e6a5f481f2bbe4d0f0ab1f935e6"
+                "reference": "c6dfaf840e2758969d1878a3eaecd94aec72ce01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zhengb302/LumengPHP-Extensions/zipball/00e42ed620744e6a5f481f2bbe4d0f0ab1f935e6",
-                "reference": "00e42ed620744e6a5f481f2bbe4d0f0ab1f935e6",
+                "url": "https://api.github.com/repos/zhengb302/LumengPHP-Extensions/zipball/c6dfaf840e2758969d1878a3eaecd94aec72ce01",
+                "reference": "c6dfaf840e2758969d1878a3eaecd94aec72ce01",
                 "shasum": ""
             },
             "require": {
-                "lumeng/lumeng-php": "0.1.0",
-                "lumeng/lumeng-php-db": "0.1.0",
+                "lumeng/lumeng-php": "0.2.*",
+                "lumeng/lumeng-php-db": "0.1.*",
                 "php": ">=5.6.0"
             },
             "type": "library",
@@ -143,7 +143,7 @@
                 "framework",
                 "php framework"
             ],
-            "time": "2017-09-20 10:14:50"
+            "time": "2017-09-27 02:54:36"
         },
         {
             "name": "psr/log",

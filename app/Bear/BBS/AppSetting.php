@@ -46,7 +46,9 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
     }
 
     public function getInterceptors() {
-        return [];
+        return [
+            \Bear\BBS\Interceptors\SimpleDebuger::class => '*',
+        ];
     }
 
     public function getRoutingConfig() {
