@@ -2,16 +2,17 @@
 
 namespace Bear\BBS\Interceptors;
 
+use LumengPHP\Db\Connection\ConnectionInterface;
 use LumengPHP\Http\InterceptorChainInterface;
 use LumengPHP\Http\Routing\RouterInterface;
-use LumengPHP\Db\Connection\ConnectionInterface;
+use LumengPHP\Kernel\AppContextInterface;
 
 /**
  * 简单的调试器
  *
  * @author zhengluming <luming.zheng@shandjj.com>
  */
-class SimpleDebuger {
+class SimpleDebugger {
 
     /**
      * @var InterceptorChainInterface 拦截器链对象
@@ -31,6 +32,21 @@ class SimpleDebuger {
      */
     private $conn;
 
+    /**
+     * @var AppContextInterface
+     * @service 
+     */
+    private $appContext;
+
+    /**
+     * @var array 调试信息
+     */
+    private $debugInfo;
+
+    public function init() {
+        $this->appContext->getServiceContainer()->register('simpleDebugger', $this);
+    }
+
     public function execute() {
         //在控制器执行之前拦截
         $startTime = (int) (microtime(true) * 1000);
@@ -41,16 +57,18 @@ class SimpleDebuger {
         //在控制器执行之后拦截
         $endTime = (int) (microtime(true) * 1000);
 
-        //修改结果
-        $debug = [
+        $this->debugInfo = [
             'pathinfo' => $this->router->getPathInfo(),
             'timeConsumed' => ($endTime - $startTime) . 'ms',
             'lastSql' => $this->conn->getLastSql(),
         ];
-        $return['__debug'] = $debug;
 
         //返回结果
         return $return;
+    }
+
+    public function getDebugInfo() {
+        return $this->debugInfo;
     }
 
 }

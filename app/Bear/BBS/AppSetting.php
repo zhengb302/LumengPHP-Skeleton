@@ -2,8 +2,10 @@
 
 namespace Bear\BBS;
 
-use LumengPHP\Http\HttpAppSettingInterface;
+use Bear\BBS\Interceptors\SimpleDebugger;
 use LumengPHP\Console\ConsoleAppSettingInterface;
+use LumengPHP\Http\Events\HttpResultCreated;
+use LumengPHP\Http\HttpAppSettingInterface;
 
 /**
  * 应用配置
@@ -37,6 +39,14 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
         ];
     }
 
+    public function getEventConfig() {
+        return [
+            HttpResultCreated::class => [
+                \Bear\BBS\EventListeners\HttpResultCreatedListener::class,
+            ],
+        ];
+    }
+
     public function getRootDir() {
         return $this->rootDir;
     }
@@ -47,7 +57,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
 
     public function getInterceptors() {
         return [
-            \Bear\BBS\Interceptors\SimpleDebuger::class => '*',
+            SimpleDebugger::class => '*',
         ];
     }
 
@@ -62,7 +72,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
     public function getCmdMapping() {
         return [
             'helloWorld' => \Bear\BBS\Commands\HelloWorld::class,
-            'user.showUser' => \Bear\BBS\Commands\User\ShowUser::class,
+            'user:showUser' => \Bear\BBS\Commands\User\ShowUser::class,
         ];
     }
 
