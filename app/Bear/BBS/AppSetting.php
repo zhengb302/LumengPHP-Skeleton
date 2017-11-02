@@ -37,7 +37,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
                 $appContext = $container->get('appContext');
                 $config = $appContext->getConfig('redis');
                 $redis = new Redis();
-                $redis->connecte($config['host'], $config['port']);
+                $redis->connect($config['host'], $config['port']);
                 return $redis;
             },
             'userEventQueue' => [
