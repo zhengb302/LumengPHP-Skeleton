@@ -6,6 +6,7 @@ use Bear\BBS\Interceptors\SimpleDebugger;
 use LumengPHP\Console\ConsoleAppSettingInterface;
 use LumengPHP\Http\Events\HttpResultCreated;
 use LumengPHP\Http\HttpAppSettingInterface;
+use Redis;
 
 /**
  * 应用配置
@@ -30,7 +31,18 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
     }
 
     public function getServices() {
-        return [];
+        return [
+            'redisConn' => function($container) {
+                $appContext = $container->get('appContext');
+                $config = $appContext->getConfig('redis');
+                $redis = new Redis();
+                $redis->connecte($config['host'], $config['port']);
+                return $redis;
+            },
+            'userEventQueue' => [
+                'class' => '',
+            ],
+        ];
     }
 
     public function getExtensions() {
