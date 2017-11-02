@@ -80,7 +80,9 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
 
     public function getRoutingConfig() {
         return [
+            '/' => \Bear\BBS\Controllers\HelloWorld::class,
             '/helloWorld' => \Bear\BBS\Controllers\HelloWorld::class,
+            '/user/login' => \Bear\BBS\Controllers\User\Login::class,
             '/user/greetUser' => \Bear\BBS\Controllers\User\GreetUser::class,
             '/user/showUser' => \Bear\BBS\Controllers\User\ShowUser::class,
         ];
@@ -90,7 +92,6 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
         return [
             'helloWorld' => \Bear\BBS\Commands\HelloWorld::class,
             'user:showUser' => \Bear\BBS\Commands\User\ShowUser::class,
-            'user:login' => \Bear\BBS\Commands\User\Login::class,
         ];
     }
 

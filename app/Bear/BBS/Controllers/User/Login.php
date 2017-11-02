@@ -1,9 +1,8 @@
 <?php
 
-namespace Bear\BBS\Commands\User;
+namespace Bear\BBS\Controllers\User;
 
 use Bear\BBS\Events\UserLogined;
-use LumengPHP\Console\InputInterface;
 use LumengPHP\Kernel\Event\EventManagerInterface;
 
 /**
@@ -14,10 +13,10 @@ use LumengPHP\Kernel\Event\EventManagerInterface;
 class Login {
 
     /**
-     * @var InputInterface 
-     * @service
+     * @var string 
+     * @get
      */
-    private $input;
+    private $username;
 
     /**
      * @var EventManagerInterface 
@@ -27,15 +26,14 @@ class Login {
 
     public function execute() {
         //登录逻辑。。。
-        $username = trim($this->input->getArg(1));
-        if (!$username) {
+        if (!$this->username) {
             _throw('用户名不能为空！');
         }
 
         //登录完成，触发事件
-        $this->eventManager->trigger(new UserLogined($username));
+        $this->eventManager->trigger(new UserLogined($this->username));
 
-        echo "登录成功！\n";
+        return success('登录成功！');
     }
 
 }
