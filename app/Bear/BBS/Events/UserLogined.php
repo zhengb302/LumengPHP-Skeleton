@@ -11,22 +11,22 @@ namespace Bear\BBS\Events;
 class UserLogined {
 
     /**
-     * @var int 
+     * @var string 
      */
-    private $uid;
+    private $username;
 
     /**
      * @var int 
      */
     private $loginTime;
 
-    public function __construct($uid) {
-        $this->uid = $uid;
+    public function __construct($username) {
+        $this->username = $username;
         $this->loginTime = time();
     }
 
-    public function getUid() {
-        return $this->uid;
+    public function getUsername() {
+        return $this->username;
     }
 
     public function getLoginTime() {
