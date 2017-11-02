@@ -5,7 +5,7 @@
  */
 
 return [
-    //日志组件名称
+    //日志组件名称(服务名)
     'logger' => env('DB_LOGGER', 'dbLogger'),
     //连接配置
     'connections' => [
