@@ -12,12 +12,12 @@ return [
         'host' => env('REDIS_HOST', '127.0.0.1'),
         'port' => env('REDIS_PORT', 6379),
     ],
-    //事件监听守护进程的配置
-    'eventListend' => [
-        //运行用户的用户名
-        'user' => env('EVENT_LISTEND_USER', 'nobody'),
-        //运行用户的组名
-        'group' => env('EVENT_LISTEND_GROUP', 'nobody'),
+    //事件监听配置
+    'eventListen' => [
+        //是否禁用多进程模式
+        'disableMultiWorkers' => (boolean) env('EVENT_LISTEN_DISABLE_MULTI_WORKERS', false),
+        //每次处理的最大事件数量
+        'maxEventNum' => env('EVENT_LISTEN_MAX_EVENT_NUM', 1000),
     ],
 ];
 

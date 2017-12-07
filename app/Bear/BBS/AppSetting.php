@@ -41,7 +41,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
                 return $redis;
             },
             'userEventQueue' => [
-                'class' => \LumengPHP\Components\Queue\BlockingRedisQueue::class,
+                'class' => \LumengPHP\Components\Queue\RedisQueue::class,
                 'constructor-args' => ['@redisConn', '/bear/bbs/eventQueues/userEventQueue'],
             ],
         ];
@@ -53,7 +53,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
         ];
     }
 
-    public function getEventConfig() {
+    public function getEvents() {
         return [
             HttpResultCreated::class => [
                 \Bear\BBS\EventListeners\HttpResultCreatedListener::class,
@@ -88,7 +88,7 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
         ];
     }
 
-    public function getCmdMapping() {
+    public function getCmds() {
         return [
             'helloWorld' => \Bear\BBS\Commands\HelloWorld::class,
             'user:showUser' => \Bear\BBS\Commands\User\ShowUser::class,
