@@ -2,6 +2,8 @@
 
 namespace Bear\BBS\Controllers;
 
+use Bear\BBS\Events\HelloWorldVisited;
+
 /**
  * HelloWorld for HTTP
  *
@@ -10,6 +12,7 @@ namespace Bear\BBS\Controllers;
 class HelloWorld {
 
     public function execute() {
+        event_manager()->trigger(new HelloWorldVisited());
         return success('Hello world!');
     }
 

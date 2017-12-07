@@ -8,6 +8,7 @@ use LumengPHP\Http\Events\HttpResultCreated;
 use LumengPHP\Http\HttpAppSettingInterface;
 use Redis;
 use Bear\BBS\Events\UserLogined;
+use Bear\BBS\Events\HelloWorldVisited;
 
 /**
  * 应用配置
@@ -40,6 +41,10 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
                 $redis->connect($config['host'], $config['port']);
                 return $redis;
             },
+            'defaultEventQueue' => [
+                'class' => \LumengPHP\Components\Queue\RedisQueue::class,
+                'constructor-args' => ['@redisConn', '/bear/bbs/eventQueues/defaultEventQueue'],
+            ],
             'userEventQueue' => [
                 'class' => \LumengPHP\Components\Queue\RedisQueue::class,
                 'constructor-args' => ['@redisConn', '/bear/bbs/eventQueues/userEventQueue'],
@@ -57,6 +62,9 @@ class AppSetting implements HttpAppSettingInterface, ConsoleAppSettingInterface 
         return [
             HttpResultCreated::class => [
                 \Bear\BBS\EventListeners\HttpResultCreatedListener::class,
+            ],
+            HelloWorldVisited::class => [
+                \Bear\BBS\EventListeners\HelloWorldVisitedListener::class,
             ],
             UserLogined::class => [
                 \Bear\BBS\EventListeners\UserLoginedLogger::class,
